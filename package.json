@@ -1,0 +1,31 @@
+{
+  "name": "cucumber_playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "pretest":"npx ts-node src/util/test.ts",
+    "test": "cucumber-js --config=config/cucumber.js -f @cucumber/pretty-formatter",
+    "posttest": "npx ts-node src/util/reporter/reporter.ts",
+    "test:failed": "cucumber-js -p rerun @rerun.txt"
+  },
+  "keywords": [],
+  "author": "Hanuman",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "@playwright/test": "^1.46.1",
+    "@types/cucumber": "^7.0.0",
+    "@types/node": "^22.3.0",
+    "allure-commandline": "^2.30.0",
+    "allure-cucumberjs": "^3.0.0-beta.10",
+    "multiple-cucumber-html-reporter": "^3.3.0",
+    "ts-node": "^10.9.2",
+    "winston": "^3.8.2"
+  },
+  "dependencies": {
+    "allure-js-commons": "^3.0.0-beta.10",
+    "cucumber-playwright": "^1.2.1"
+  }
+}
